@@ -1,0 +1,26 @@
+---
+driver:
+  name: vagrant
+  provider: vmware_desktop
+  network:
+    - ["private_network", {ip: 192.168.33.11}]
+
+provisioner:
+  name: chef_zero
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: rockylinux-9
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - test/integration/default
+
+#suites:
+#- name: apache 
+#  run_list:
+#  - recipe[worpdress::default] 

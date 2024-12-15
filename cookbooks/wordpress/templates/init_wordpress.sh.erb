@@ -1,0 +1,8 @@
+#/bin/bash
+curl -s "http://<%= @server_ip %>/wp-admin/install.php?step=2" \
+--data-urlencode "weblog_title=<%= @weblog_title %>" \
+--data-urlencode "user_name=<%= @user_name %>" \
+--data-urlencode "admin_email=<%= @admin_email %>" \
+--data-urlencode "admin_password=<%= @admin_password %>" \
+--data-urlencode "admin_password2=<%= @admin_password %>" \
+--data-urlencode "pw_weak=1"
