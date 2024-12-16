@@ -1,0 +1,10 @@
+Pruebas unitarias
+*****************
+Ubicarse dentro de cookbooks/wordpress
+chef exec rspec -p
+
+Pruebas de integración
+**********************
+Ubicarse dentro de cookbooks/wordpress
+kitchen list
+kitchen verify <instancia>
