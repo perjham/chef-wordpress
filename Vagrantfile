@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "lab01.prueba.com"
   config.vm.provider "vmware_desktop" do |vb|
      vb.memory = "2048"
+     vb.cpus = "2"
   end
   config.vm.provision "shell", inline: <<-SHELL
     sudo echo "Hi"
