@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = "rockylinux/9"
   #config.vm.network "forwarded_port", guest: 80, host: 8081
   config.vm.network "private_network", ip: "192.168.33.11"
+  config.vm.hostname = "lab01.prueba.com"
   config.vm.provider "vmware_desktop" do |vb|
      vb.memory = "2048"
   end
